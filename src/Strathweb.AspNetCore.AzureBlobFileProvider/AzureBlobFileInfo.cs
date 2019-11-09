@@ -26,7 +26,6 @@ namespace Strathweb.AspNetCore.AzureBlobFileProvider
                     Exists = b.Exists();
                     if (Exists)
                     {
-                        b.FetchAttributes();
                         Length = b.Properties.Length;
                         PhysicalPath = b.Uri.ToString();
                         LastModified = b.Properties.LastModified ?? DateTimeOffset.MinValue;
